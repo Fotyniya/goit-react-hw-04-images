@@ -1,16 +1,22 @@
+import { GlobalStyle } from "../components/GlobalStyle";
+import { useState } from "react";
+import { Toaster } from 'react-hot-toast';
+//import { ImageGallery } from "../components/ImageGallery/ImageGallery";
+import { Searchbar } from "../components/Searchbar/Searchbar"
+
 export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
+  const [query, setQuery] = useState('');
+
+  const handleSubmit = (query) => {
+    setQuery(query);
+  };
+  
+    return (
+      <div>
+       <Toaster/>
+       <Searchbar onSearch = { handleSubmit }/>
+       
+       <GlobalStyle />
+      </div>
+    ); 
 };
