@@ -44,7 +44,7 @@ useEffect(() => {
             .finally(() => {
                 setIsLoading(false)
             });
-}, [page, query]);
+}, [page, query, gallery]);
 
 const loadMore = () => {
     setPage(prevPage => prevPage + 1 )
