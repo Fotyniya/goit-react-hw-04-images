@@ -1,5 +1,5 @@
 import { useState } from "react";
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import toast from 'react-hot-toast';
 import { BsSearch } from 'react-icons/bs';
 import { SearchContainer, SearchFormButton, SearchForm, SearchFormInput, SearchFormLabel } from "../Searchbar/Searchbar.styled"
@@ -42,6 +42,6 @@ export const Searchbar = ({onSearch}) => {
     }
 
 
-// Searchbar.propTypes = {
-//     onSearch: PropTypes.func.isRequired,
-// }
+Searchbar.propTypes = {
+    onSearch: PropTypes.func.isRequired,
+}

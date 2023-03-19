@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 
 import axios from 'axios';
-//import toast from 'react-hot-toast';
+import PropTypes from 'prop-types';
 
 import { Loader } from  '../Loader'
 import { ImageGalleryItem } from '../ImageGalleryItem/ImageGalleryItem';
@@ -74,3 +74,6 @@ const loadMore = () => {
     );
 };
 
+ImageGallery.propTypes = {
+    query: PropTypes.string.isRequired,
+};

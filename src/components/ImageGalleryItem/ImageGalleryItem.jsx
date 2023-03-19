@@ -1,5 +1,5 @@
 import { useState } from 'react';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Modal } from '../Modal/Modal'
 import {Image} from '../ImageGalleryItem/ImageGalleryItem.styled'
 
@@ -22,9 +22,9 @@ export const ImageGalleryItem = ({item}) => {
         </>   
     } 
 
-// ImageGalleryItem.propTypes = {
-//     item: PropTypes.shape({
-//         webformatURL: PropTypes.string.isRequired,
-//         tags: PropTypes.string.isRequired,
-//     }).isRequired,
-// }
+ImageGalleryItem.propTypes = {
+    item: PropTypes.shape({
+        webformatURL: PropTypes.string.isRequired,
+        tags: PropTypes.string.isRequired,
+    }).isRequired,
+}
