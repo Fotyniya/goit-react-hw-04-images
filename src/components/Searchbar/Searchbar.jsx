@@ -16,7 +16,7 @@ export const Searchbar = ({onSearch}) => {
         if(!value.trim()){
           return toast.error('This is an error! Enter a search query!');
         }
-        onSearch(value);
+        onSearch(value.trim());
         setValue('')
     };
 
